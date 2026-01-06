@@ -1,0 +1,61 @@
+{
+  "name": "main-app",
+  "version": "1.0.0",
+  "homepage": "https://1mpl0rd.github.io/lovefinderrz",
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production",
+    "postbuild": "node remove-css-hacks.cjs",
+    "preview": "serve -s dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@1mpl0rd/react-ui-components": "^1.0.6",
+    "@1mpl0rd/react-ui-icons": "^1.0.0",
+    "@emailjs/browser": "^4.4.1",
+    "@tailwindcss/postcss": "^4.1.12",
+    "dotenv-webpack": "^8.1.1",
+    "react": "^19.1.1",
+    "react-confetti": "^6.4.0",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.7",
+    "@types/react-router-dom": "^5.3.3",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "gh-pages": "^6.3.0",
+    "html-webpack-plugin": "^5.6.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "postcss": "^8.5.6",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-import": "^16.1.1",
+    "postcss-loader": "^8.1.1",
+    "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^10.3.0",
+    "serve": "^14.2.4",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^4.1.12",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.2",
+    "webpack": "^5.101.3",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

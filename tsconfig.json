@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    /* === File Layout === */
+    // "rootDir": "./src", // Optional: Where TypeScript starts building. Automatically covered by "include".
+    "outDir": "./dist", // Target directory for compiled JS files
+    "baseUrl": "./src", // Base for module imports, allows e.g. "import { A } from 'components/Flow'"
+
+    /* === Language & Environment === */
+    "target": "ES6", // ECMAScript target version ("ES6" = good choice for browser compatibility, "esnext" = default)
+    "module": "ESNext", // Module format for Webpack – "ESNext" generates modern JS modules
+    "moduleResolution": "node", // Module resolution (e.g. for node_modules)
+    "jsx": "react-jsx", // Modern JSX transform (no "import React" needed)
+    "esModuleInterop": true, // Allows importing CommonJS modules as ESModule (e.g. "import fs from 'fs'")
+    "allowSyntheticDefaultImports": true, // Allows "import x from 'module'" even if no default export exists
+
+    /* === Optional: Only relevant for Node.js-Projects === */
+    // "lib": ["esnext"],            // e.g. DOM, ES2020, etc.
+    // "types": ["node"],            // for node-specific types
+    // npm install -D @types/node
+
+    /* === Output Options === */
+    "sourceMap": true,
+    // Optional: Only relevant // Creates source maps for debugging (e.g. in DevTools) for npm libraries, not for web apps
+    // "declaration": true,
+    // "declarationMap": true,
+
+    /* === Type Safety / Checks === */
+    "strict": true, // Enables all strict TypeScript checks
+    "noUncheckedIndexedAccess": true, // Index accesses like obj[key] potentially return undefined
+    "exactOptionalPropertyTypes": true, // Optional properties must be handled explicitly
+    "isolatedModules": true, // Enforces module isolation (e.g. for Webpack + Babel builds)
+    "skipLibCheck": true, // Skips type checking of @types/ - speeds up builds
+    "forceConsistentCasingInFileNames": true // Errors for case sensitivity in import paths (helpful on Mac/Windows)
+
+    /* === Style Options (Optional – für Clean Code) === */
+    // "noImplicitReturns": true,           // All functions must return a value
+    // "noImplicitOverride": true,          // Overridden methods require "override"
+    // "noUnusedLocals": true,              // Prevent unused local variables
+    // "noUnusedParameters": true,          // Prevent unused function parameters
+    // "noFallthroughCasesInSwitch": true,  // Prevents fall-through in switch
+    // "noPropertyAccessFromIndexSignature": true,
+
+    /* === Legacy/JS Support (Optional) === */
+    // "moduleDetection": "force" // Enable if JS files should also be processed
+  },
+
+  "include": ["src"], // Which folders/files should be compiled
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
+}
