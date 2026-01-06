@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmain_app=self.webpackChunkmain_app||[]).push([[916],{805:function(a,e,n){n.r(e);var i=n(848),s=n(588);e.default=()=>(0,i.jsx)("div",{className:"p-6",children:(0,i.jsx)(s.EY,{as:"h2",variant:"heading2xl",numeric:!0,children:"Signup Page"})})}}]);
